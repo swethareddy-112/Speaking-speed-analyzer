@@ -1,0 +1,106 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speaking Speed Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="mic-icon">🎙️</div>
+
+            <h1>Speaking Speed Analyzer</h1>
+
+            <p>
+                Speak naturally and measure your speaking speed
+            </p>
+        </div>
+
+        <div class="controls">
+
+            <button id="startBtn" onclick="startRecording()">
+                🎤 Start Speaking
+            </button>
+
+            <button id="stopBtn" onclick="stopRecording()" disabled>
+                ⏹ Stop
+            </button>
+
+        </div>
+
+        <div id="status">
+            Click "Start Speaking" and begin talking.
+        </div>
+
+        <div class="timer">
+            <span id="timer">00:00</span>
+        </div>
+
+        <div class="stats">
+
+            <div class="card">
+                <div class="card-icon">📝</div>
+                <h3>Words</h3>
+                <strong id="wordCount">0</strong>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⏱️</div>
+                <h3>Time</h3>
+                <strong id="timeCount">0 sec</strong>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Speed</h3>
+                <strong id="wpm">0 WPM</strong>
+            </div>
+
+        </div>
+
+        <div class="speed-result">
+
+            <h2 id="speedTitle">
+                Your speaking speed
+            </h2>
+
+            <div class="speed-circle">
+                <span id="speedValue">0</span>
+                <small>WPM</small>
+            </div>
+
+            <p id="speedMessage">
+                Start speaking to calculate your speed.
+            </p>
+
+        </div>
+
+        <div class="transcript-section">
+
+            <h2>📄 Speech Transcript</h2>
+
+            <div id="transcript">
+                Your recognized speech will appear here...
+            </div>
+
+        </div>
+
+        <button class="clear-btn" onclick="clearAnalyzer()">
+            🗑️ Clear
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
